@@ -42,4 +42,25 @@ public class MainActivity extends AppCompatActivity {
         }
         scoreView.setText(String.valueOf(score));
     }
+
+    public void addTeamAFoul(View v){
+        teamAFoul++;
+        displayFoul(teamAFoul,"A");
+    }
+
+    public void addTeamBFoul(View v){
+        teamBFoul++;
+        displayFoul(teamBFoul,"B");
+    }
+
+    public void displayFoul(int foul, String team) {
+        TextView foulView;
+        if(team=="A"){
+            foulView = (TextView) findViewById(R.id.teamAFoul);
+        }
+        else{
+            foulView = (TextView) findViewById(R.id.teamBFoul);
+        }
+        foulView.setText(String.valueOf(foul));
+    }
 }
