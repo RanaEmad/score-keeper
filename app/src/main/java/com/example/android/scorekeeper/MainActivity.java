@@ -63,4 +63,15 @@ public class MainActivity extends AppCompatActivity {
         }
         foulView.setText(String.valueOf(foul));
     }
+
+    public void reset(View v){
+        teamAScore=0;
+        teamBScore=0;
+        teamAFoul=0;
+        teamBFoul=0;
+        displayScore(teamAScore,"A");
+        displayScore(teamBScore,"B");
+        displayFoul(teamAFoul,"A");
+        displayFoul(teamBFoul,"B");
+    }
 }
